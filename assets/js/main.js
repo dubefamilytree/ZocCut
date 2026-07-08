@@ -184,7 +184,7 @@
     }
   });
 // Set your event date here (YYYY-MM-DDTHH:MM:SS)
-const targetDate = new Date("2026-12-31T23:59:59").getTime();
+const targetDate = new Date("2026-08-02T07:59:59").getTime();
 
 const countdownFunction = setInterval(() => {
   const now = new Date().getTime();
