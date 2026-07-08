@@ -906,7 +906,25 @@ section,
     font-size: 24px;
   }
 }
-
+#countdown-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.time-box {
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  min-width: 80px;
+}
+.time-box span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -1183,25 +1201,7 @@ section,
     padding: 20px;
   }
 }
-#countdown-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-.time-box {
-  background: #222;
-  color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  min-width: 80px;
-}
-.time-box span {
-  display: block;
-  font-size: 2rem;
-  font-weight: bold;
-}
+
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
