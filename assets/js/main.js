@@ -183,7 +183,32 @@
       }
     }
   });
+// Set your event date here (YYYY-MM-DDTHH:MM:SS)
+const targetDate = new Date("2026-12-31T23:59:59").getTime();
 
+const countdownFunction = setInterval(() => {
+  const now = new Date().getTime();
+  const difference = targetDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+  // Display the result in the corresponding elements
+  document.getElementById("days").innerText = String(days).padStart(2, '0');
+  document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+  document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+  document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+  // If the countdown is over, show a message
+  if (difference < 0) {
+    clearInterval(countdownFunction);
+    document.getElementById("countdown-container").style.display = "none";
+    document.getElementById("expired-message").style.display = "block";
+  }
+}, 1000);
   /**
    * Navmenu Scrollspy
    */
